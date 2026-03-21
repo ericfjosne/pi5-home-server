@@ -9,3 +9,6 @@
 - Case: [Edatec ED-Pi5Case-B](https://edatec.cn/ac/ED_Pi5Case_B), passive cooling aluminum
   - Requires ED-Pi5Case-HA-B for HAT support, as per [the documentation](https://edatec.cn/storage/file/ED-Pi5Case-B%20Datasheet-EN-2024.07.30.pdf)
 - Power supply: [Raspberry Pi 27W USB-C Power Supply](https://www.raspberrypi.com/products/27w-power-supply/?variant=27w-power-supply-eu-black)
+- Storage:
+  - System: [Raspberry Pi 256Gb SSD](https://www.raspberrypi.com/products/ssd/)
+  - External: 4x [WD 5 TB Elements Portable External Hard Drive, USB 3.0](https://www.westerndigital.com/en-us/products/portable-drives/wd-elements-portable-usb-3-0-hdd?sku=WDBU6Y0050BBK-WESN)

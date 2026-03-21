@@ -16,18 +16,28 @@ dtoverlay=disable-bt-pi5
 # Configure via NetworkManager
 
 
-List currently active connections and delete them
+List currently active connections
 
 ```sh
 sudo nmcli -p connection show
-sudo nmcli connection delete [UUID]
-sudo nmcli -p connection show netplan-eth0
-sudo nmcli connection show
-sudo nmcli connection delete netplan-eth0
-sudo nmcli connection show
 ```
 
-# Configure the 2 wired connections
+
+Delete them, based on UUID or name
+
+```sh
+
+sudo nmcli connection delete [UUID]
+sudo nmcli connection delete netplan-eth0
+```
+
+Confirm the connection configuration was deleted
+
+```sh
+sudo nmcli -p connection show
+```
+
+# Set up the 2 wired connections (uplink & local)
 
 ## Uplink
 

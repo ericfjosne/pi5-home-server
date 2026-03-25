@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 title: Raspberry Pi 5 as a home server
 description: Raspberry Pi 5 configuration as home server (gateway, NAS, ...)
-sidebar:
+sidebars:
   - index
   - hardware
   - operating-system

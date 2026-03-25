@@ -15,7 +15,7 @@ sudo nano /etc/dnsmasq.d/home.lan.conf
 Add content
 ```
 # Listen on this interface
-interface=eth1
+interface=br0
 domain-needed
 bogus-priv
 

@@ -1,10 +1,7 @@
 ---
-id: fw
 title: Configure firewall
-sidebar_label: Configure firewall
+toc: true
 ---
-
-# Configure firewall
 
 ## Enable ip forwarding at kernel level
 

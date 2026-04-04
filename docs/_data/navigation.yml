@@ -1,0 +1,33 @@
+# Sidebar Navigation
+docs:
+  - title: "Build"
+    children:
+      - title: "Hardware"
+        url: /build/hardware.html
+      - title: "Operating system"
+        url: /build/operating-system.html
+  - title: "Disks Configuration"
+    children:
+      - title: "Root encryption"
+        url: /disks/root-encryption.html
+      - title: "USB disks encryption"
+        url: /disks/external-encryption.html
+      - title: "USB disks automount"
+        url: /disks/external-auto-mount.html
+  - title: "Networking"
+    children:
+      - title: "Wifi & Bluetooth"
+        url: /networking/radio.html
+      - title: "Interfaces"
+        url: /networking/interfaces.html
+      - title: "Firewall"
+        url: /networking/fw.html
+      - title: "DHCP & DNS"
+        url: /networking/dhcp-dns.html
+  - title: "Resources"
+    children:
+      - title: "Site index"
+        url: /
+      - title: "Github repo"
+        url: https://github.com/ericfjosne/pi5-home-server-setup/
+        target: _blank

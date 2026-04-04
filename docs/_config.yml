@@ -1,13 +1,63 @@
-theme: jekyll-theme-minimal
-title: Raspberry Pi 5 as a home server
-description: Raspberry Pi 5 configuration as home server (gateway, NAS, ...)
-sidebars:
-  - index
-  - hardware
-  - operating-system
-  - root-partition-encryption
-  - external-disks-encryption
-  - external-disks-auto-mount
-  - network
-  - fw
-  - dhcp-dns
+# Site Settings
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+# Site Data
+locale: en-US
+encoding: "utf-8"
+title: "Raspberry Pi 5 setup as Home Server"
+name: &name "Eric Fjøsne"
+description: &description "A comprehensive guide to setting up a Raspberry Pi 5 server."
+url: "https://ericfjosne.github.io"
+baseurl: "/pi5-home-server-setup"
+repository: "ericfjosne/pi5-home-server-setup"
+enable_copy_code_button: true
+
+# Site Author
+author:
+  name   : *name
+  avatar : "https://avatars.githubusercontent.com/u/4800868"
+  bio    : "Tech enthusiast and Pi 5 builder."
+  location: "Stockholm, Sweden"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ericfjosne"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ericfjosne/"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ericfjosne"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ericfjosne/"
+  since: "2026"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      toc_sticky: true
+      sidebar:
+        nav: "docs"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache

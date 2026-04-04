@@ -1,10 +1,7 @@
 ---
-id: external-disks-auto-mount
 title: Auto unlock and auto mount external disks
-sidebar_label: External disks automount
+toc: true
 ---
-
-# Auto unlock and auto mount external disks
 
 ## Install systemd-cryptsetup
 
@@ -144,7 +141,7 @@ Where:
  - `x-systemd.device-timeout=10s` indicates that we will wait up to 10 seconds for the device to respond, and fail the auto mount operation after that.
  - `x-systemd.idle-timeout=5m` configures the idle timeout for the automounted unit to 5 minutes.
 
-## Our setup
+### Our setup
 
 In our setup, we make use of 4 external USB disks:
 - `data-master`: contains all of our master data.

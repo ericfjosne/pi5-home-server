@@ -1,31 +1,9 @@
 ---
-id: network
-title: Configure networking
-sidebar_label: Configure networking
+title: Configure interfaces via NetworkManager
+toc: true
 ---
 
-# Configure networking
-
-## Disable Wifi & bluetooth
-
-We don't want any radio enabled during operations.
-
-To achieve this, edit the raspberry pi boot config
-
-```sh
-sudo nano /boot/firmware/config.txt
-```
-
-Add the following lines (Raspberry pi 5 specific) under the `[all]`
-
-```properties
-dtoverlay=disable-wifi-pi5
-dtoverlay=disable-bt-pi5
-```
-
-## Configure interfaces via NetworkManager
-
-### Clear existing connections
+## Clear existing connections
 
 List currently active connections
 
@@ -47,9 +25,9 @@ Confirm the connection configuration was deleted
 sudo nmcli -p connection show
 ```
 
-### Set up the 2 wired connections (uplink & local)
+## Set up the 2 wired connections (uplink & local)
 
-#### Uplink
+### Uplink
 
 Configure ip address on network interface `eth2` as auto (retrieved via DHCP)
 
@@ -63,7 +41,7 @@ Bring physical interface `eth2` up
 sudo nmcli connection up eth2
 ```
 
-#### Local network
+### Local network
 
 For this setup, we want to have the ability to run virtual machines on the server and have them exposed on the local network. Those virtual machines will need to share the same IP address range as all physical machines connected to the local network. To achieve this, we need to configure a bridge network interface `br0`, and add our physical interface `eth1` as bridge slave.
 
@@ -94,7 +72,7 @@ Bring bridge interface `br0` up
 sudo nmcli connection up br0
 ```
 
-### Check connection status
+## Check connection status
 
 Running the following command
 

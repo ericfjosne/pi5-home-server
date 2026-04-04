@@ -1,10 +1,6 @@
 ---
-id: operating-system
 title: Install the Operating System (OS)
-sidebar_label: Install operating system
 ---
-
-# Install the Operating System (OS)
 
 For this build, we will use the official [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/), more specifically the Lite version (ideal for usage on a headless server). This choice was motivated by the fact that all the components present on the Waveshare HAT were supported by this distribution, out of the box.
 

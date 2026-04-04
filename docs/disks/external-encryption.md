@@ -1,10 +1,7 @@
 ---
-id: external-disks-encryption
 title: Set up encryption on external USB disks
-sidebar_label: External disks encryption
+toc: true
 ---
-
-# Set up encryption on external USB disks
 
 We want to initialize our external USB disks for encryptions. 
 
@@ -12,6 +9,7 @@ We want to initialize our external USB disks for encryptions.
 
 Let's assume the disk you connected appears as `/dev/sda`. Let's repartition it.
 
+```sh
 sudo fdisk /dev/sda
 ```
 

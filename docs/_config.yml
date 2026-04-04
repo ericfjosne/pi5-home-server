@@ -5,7 +5,9 @@ sidebars:
   - index
   - hardware
   - operating-system
-  - disk-encryption
+  - root-partition-encryption
+  - external-disks-encryption
+  - external-disks-auto-mount
   - network
   - fw
   - dhcp-dns

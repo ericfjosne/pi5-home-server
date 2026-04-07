@@ -10,6 +10,7 @@ We want simple no brainer DHCP & DNS services and configurations. `dnsmasq` comb
 To install `dnsmasq`, execute the following command:
 
 ```sh
+sudo apt update
 sudo apt install dnsmasq
 ```
 

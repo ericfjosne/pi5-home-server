@@ -24,6 +24,12 @@ docs:
         url: /networking/fw.html
       - title: "DHCP & DNS"
         url: /networking/dhcp-dns.html
+  - title: "Services"
+    children:
+      - title: "File sharing"
+        url: /services/file-sharing.html
+      - title: "Time Machine"
+        url: /services/timemachine.html
   - title: "Resources"
     children:
       - title: "Site index"

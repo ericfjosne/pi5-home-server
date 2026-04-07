@@ -78,7 +78,7 @@ Filesystem/RAID signature on partition 1 will be wiped.
 
 If all is as expected, we now need to write the changes to disk, using the `w` write command.
 
-| ‼️ This operation will wipe all existing data from this drive. Do make sure you have a copy of what you need before executing it. In case of doubt, abort all changes by executing the `q` command to quit. No change will be applied when quitting without having executed the `w` write command.
+> ‼️ This operation will wipe all existing data from this drive. Do make sure you have a copy of what you need before executing it. In case of doubt, abort all changes by executing the `q` command to quit. No change will be applied when quitting without having executed the `w` write command.
 
 Once the changes are written to the disk, we need to quit `fdisk` by executing the `q` quit command.
 

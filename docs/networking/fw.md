@@ -28,6 +28,7 @@ We want a simple no brainer firewall service and configuration. `ufw` is the per
 To install `ufw`, execute the following command:
 
 ```sh
+sudo apt update
 sudo apt install ufw
 ```
 

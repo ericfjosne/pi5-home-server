@@ -30,6 +30,8 @@ docs:
         url: /services/file-sharing.html
       - title: "Time Machine"
         url: /services/timemachine.html
+      - title: "Docker"
+        url: /services/docker.html
   - title: "Resources"
     children:
       - title: "Site index"

@@ -35,7 +35,7 @@ Nothing beats a good old `hello-world` test to check that all is running as expe
 docker run --rm hello-world
 ```
 
-You can also validate that it is running with the right `aarch64` 64 bits architecture.
+You can also validate that it is running with the right `aarch64` 64 bits architecture by executing:
 
 ```sh
 docker info | grep Architecture

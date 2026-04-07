@@ -40,7 +40,7 @@ Let's edit it using the following command:
 sudo nano /etc/samba/smb.conf
 ```
 
-> ⚠️ The configuration as described below applied to q build using Debian 10 (Buster). It has been reused for this Debian 13 (Trixie) based build, and worked immediately. It might however consist of some deprecated configuration options.
+> ⚠️ The configuration as described below applied to a build using Debian 10 (Buster). It has been reused for this Debian 13 (Trixie) based build, and worked immediately. It might however consist of some deprecated configuration options.
 
 ### Misc
 
@@ -91,8 +91,6 @@ We can now validate whether the Samba service is active and running as expected,
 ```sh
 sudo systemctl status smbd
 ```
-
-
 ## References
 
 - [Samba `vfs-fruit` documentation](https://www.samba.org/samba/docs/current/man-html/vfs_fruit.8.html)

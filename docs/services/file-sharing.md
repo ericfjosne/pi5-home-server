@@ -20,10 +20,10 @@ sudo apt install samba
 
 ### On the file system
 
-Access restrictions at the file system level are enforced using the regular Unix user/group, and regular Unix rwx permissions. These can be managed using the following commands:
+Access restrictions at the file system level are enforced using the regular Unix user/group, and regular Unix `rwx` permissions. These can be managed using the following commands:
 
 - `chown` (change owner) dictates who owns a file. Specifically, `chown` controls what user and what group owns a given file or directory.
-- `chmod `(change mode) dictates what the user/group that owns a file can do with it. Specifically, `chmod` details read, write, and execute permissions on the Unix command line.
+- `chmod `(change mode) dictates what the user/group that owns a file can do with it. It also dictates what all other users and groups can do with it. Specifically, `chmod` details read, write, and execute permissions on the Unix command line at 3 different levels: `user`, `group` and `all`.
 
 Worded differently:
 
@@ -132,16 +132,14 @@ We don't need to make any change in this part of the file, as the default values
 
 It is however worth mentioning that the default `security = user` configuration option is used. This means that the authentication method to the Samba server will be user/password based.
 
-You can read below how to manage smb users vs unix users.
-
 ### Share Definitions
 
 Let's delete or comment out every single existing configuration entry under this section. We want to start clean.
 
-For our setup, we will create the following master shares, all located on the external disk mounted at `/mnt/master/data`:
+For our setup, we will create the following master shares `files` and `home`, all located on the external disk mounted at `/mnt/master/data`:
 
 - `files`: Contains general files to which all authenticated users should have access. 
-- `home`: Contains personal files. The share will contain one folder per user. Access to a user folder is restricted to the related authenticated user.
+- `home`: Contains personal files. The share will contain one folder per user. Access to a user folder is restricted to the related authenticated user only.
 
 Let's now add the following share definitions to our `/etc/samba/smb.conf` file:
 

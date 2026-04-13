@@ -11,7 +11,7 @@ Pi-hole is a network-wide ad-blocking application that acts as a DNS sinkhole, p
 
 ## Requirements
 
-- [Docker engine](../virtual/docker.html) must be installed and configured.
+- Your machine must be configured as a [Container host](../virtual/container-host.html).
 - [Dnsmasq](../networking/dhcp-dns.html) must be installed and configured.
 
 ## Configuration

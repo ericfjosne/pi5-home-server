@@ -1,7 +1,13 @@
 ---
-title: Install Docker engine
+title: Configure as a container host
 toc: true
 ---
+
+We want to be able to run a container host on our machine, to allow containers to run on it. For this, we will install [Docker Engine](https://docs.docker.com/engine/).
+
+## What is a container?
+
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
 ## What is Docker?
 

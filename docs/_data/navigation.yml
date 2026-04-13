@@ -24,10 +24,12 @@ docs:
         url: /networking/fw.html
       - title: "DHCP & DNS"
         url: /networking/dhcp-dns.html
-  - title: "Virtual environments"
+  - title: "Virtualization"
     children:
-      - title: "Docker"
-        url: /virtual/docker.html
+      - title: "Container Host"
+        url: /virtual/container-host.html
+      - title: "Hypervisor"
+        url: /virtual/hypervisor.html
   - title: "Services"
     children:
       - title: "File sharing"
@@ -36,6 +38,8 @@ docs:
         url: /services/timemachine.html
       - title: "Ad-blocker"
         url: /services/ad-blocker.html
+      - title: "Home Assistant"
+        url: /services/home-assistant.html
   - title: "Resources"
     children:
       - title: "Site index"

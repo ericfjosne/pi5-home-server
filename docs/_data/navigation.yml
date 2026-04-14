@@ -38,6 +38,8 @@ docs:
         url: /services/timemachine.html
       - title: "Ad-blocker"
         url: /services/ad-blocker.html
+      - title: "SMTP relay"
+        url: /services/smtp-relay.html
       - title: "Home Assistant"
         url: /services/home-assistant.html
   - title: "Resources"

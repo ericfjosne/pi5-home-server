@@ -36,6 +36,12 @@ xz -d -v haos_generic-aarch64-$HAOS_VERSION.qcow2.xz
 sudo cp haos_generic-aarch64-$HAOS_VERSION.qcow2 /var/lib/libvirt/images/haos_generic-aarch64.qcow2
 ```
 
+When downloaded, the virtual image is quite small. The virtual disk will reach full capacity very quickly. It is therefore recommended to add more space to it, upfront. The following command will add 25Gb of virtual disk space to it:
+
+```sh
+sudo qemu-img resize /var/lib/libvirt/images/haos_generic-aarch64.qcow2 +25G
+```
+
 ### Configure the VM
 
 Let's create the virtual machine instance:

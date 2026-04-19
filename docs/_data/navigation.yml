@@ -42,6 +42,10 @@ docs:
         url: /services/smtp-relay.html
       - title: "Home Assistant"
         url: /services/home-assistant.html
+  - title: "Utils"
+    children:
+      - title: "Backups"
+        url: /utils/backup.html
   - title: "Resources"
     children:
       - title: "Site index"

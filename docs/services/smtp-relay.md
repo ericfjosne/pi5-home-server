@@ -84,7 +84,13 @@ Where:
 - `REDACTED_APPLICATION_PASSWORD` is a dedicated [Google application password](https://myaccount.google.com/apppasswords), which you might need to create.
 
 
-Save the file and run the following to create/update the lookup table Postfix requires:
+Save the file. Once this is done, we want to restrict access to it as much as we can, since it contains a password in clear. Let's adjust its permissions:
+
+```sh
+sudo chmod 600 /etc/postfix/sasl_passwd
+```
+
+Finally, run the following to create/update the lookup table Postfix requires:
 
 ```sh
 sudo postmap hash:/etc/postfix/sasl_passwd

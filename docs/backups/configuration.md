@@ -1,28 +1,26 @@
 ---
-title: Configure backups
+title: Back up build configuration
 toc: true
 ---
 
+We would like to take a daily snapshot of all our build configuration files, and keep a backup of each of them.
+
 ## Requirements
 
-For our backup configuration, we will need all of our disks (master data, backups) to have been prepared. This means:
+For our backup configuration, all of our disks (master data, backups) need to have been prepared. This means:
 
 - The [external disks must be configured and encrypted](../disks/external-encryption.html).
 - They must be [configured to auto mount when accessed](../disks/external-auto-mount.html).
 
 ## Scripts location
 
-We will store all of our scripts and related configuration files under the location `/opt/backup`, which we need to create.
+We will store all of our scripts and related configuration files under the location `/opt/backup`, which we need to create if it doesn't exist yet.
 
 ```sh
 sudo mkdir /opt/backup
 ```
 
-## Backing up configuration
-
-We would like to take a daily snapshot of all our build configuration files, and keep a backup of each of them.
-
-### Prepare backup target location
+## Prepare backup target location
 
 We will store these snapshots on our external master data disk. Let's create the target location, if it doesn't already exist:
 
@@ -30,7 +28,7 @@ We will store these snapshots on our external master data disk. Let's create the
 sudo mkdir -p /mnt/data/master/backup/configuration
 ```
 
-### List files & directories to include
+## List files & directories to include
 
 Let's first list all the files and directories we would like to include in this backup, in a new dedicated file:
 
@@ -61,7 +59,7 @@ If you followed the entirety of this guide, the files that should be included ar
 /opt/backup
 ```
 
-### Create backup script
+## Create backup script
 
 Let's create our configuration backup script and make it executable:
 
@@ -92,7 +90,7 @@ sudo /opt/backup/configuration.sh
 
 Which should create today's backup at the appropriate location, as explained below.
 
-### Backup target location organization
+## Backup target location organization
 
 The `/mnt/data/master/backup/configuration` will contain one directory per year/month:
 
@@ -110,7 +108,7 @@ ls /mnt/data/master/backup/configuration/2026-04
 2026-04-14.tar.gz  2026-04-15.tar.gz  2026-04-16.tar.gz  2026-04-17.tar.gz  2026-04-18.tar.gz  2026-04-19.tar.gz
 ```
 
-### Automate script execution
+## Automate script execution
 
 We now need to make this script runs automatically. For this, we edit the `/etc/crontab` file:
 
@@ -125,9 +123,3 @@ And add the following line at the end of it:
 ```
 
 Which indicates that the script must run on a daily basis at midnight.
-
-## Backing up data
-
-The data stored on the external master disk needs to be replicated to 2 separate backup disks.
-
-*TO BE WRITTEN*

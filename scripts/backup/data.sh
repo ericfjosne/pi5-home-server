@@ -80,7 +80,7 @@ DATETIME_END=`date`
 echo "Backup process ended at $DATETIME_END. You can now unplug the backup disk $BACKUP_CRYPTDISK_NAME safely."
 
 # If an recipient email address was set, send an end of backup notification to it.
-if [[ ! -v MAIL_RECIPIENT ]]; then
+if [[ -v MAIL_RECIPIENT ]]; then
   HOSTNAME=`hostname`
   MAIL_BODY="Backup to $BACKUP_CRYPTDISK_NAME completed!\n\nStarted on $DATETIME_START\nFinished on $DATETIME_END\n\nYou can now unplug the USB disk from ${HOSTNAME^}."
   MAIL_SUBJECT="Backup of data on ${HOSTNAME^} is completed!"

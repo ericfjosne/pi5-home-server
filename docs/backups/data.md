@@ -165,9 +165,14 @@ Once the command is launched, we can detach from the `screen` session using the 
 - press A
 - press D
 
-The rsync process should still be running in the background. You can reattach to the existing detached session by executing:
+The rsync process should still be running in the background, when running:
+
+```sh
+ps aux | | grep rsync
+```
+
+You can reattach to the existing detached session by executing:
 
 ```sh
 screen -r
 ```
-CTRL + A, followed by D

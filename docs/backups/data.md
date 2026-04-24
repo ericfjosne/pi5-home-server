@@ -170,4 +170,3 @@ The rsync process should still be running in the background. You can reattach to
 ```sh
 screen -r
 ```
-CTRL + A, followed by D

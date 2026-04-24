@@ -32,6 +32,8 @@ docs:
         url: /virtual/hypervisor.html
   - title: "Services"
     children:
+      - title: "Remote access"
+        url: /services/ssh.html
       - title: "File sharing"
         url: /services/file-sharing.html
       - title: "Time Machine"

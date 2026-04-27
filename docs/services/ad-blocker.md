@@ -48,12 +48,10 @@ docker run --detach \
         --publish 53053:53/tcp \
         --publish 53053:53/udp \
         -e TZ=$TIMEZONE \
+        -e FTLCONF_dns_specialDomains_iCloudPrivateRelay=false \
         --volume $PIHOLE_DIR/etc-pihole:/etc/pihole \
         pihole/pihole:latest
 ```
-
-docker run --name pihole -p 53:53/tcp -p 53:53/udp -p 80:80/tcp -p 443:443/tcp -e TZ=Europe/London -e FTLCONF_webserver_api_password="correct horse battery staple" -e FTLCONF_dns_listeningMode=all -v ./etc-pihole:/etc/pihole -v ./etc-dnsmasq.d:/etc/dnsmasq.d --cap-add NET_ADMIN --restart unless-stopped pihole/pihole:latest
-
 
 Some notes about this configuration (in regards to the [official documentation](https://docs.pi-hole.net/docker/)):
 - We run the container as a background daemon, hence the `--detach` argument.
@@ -62,6 +60,7 @@ Some notes about this configuration (in regards to the [official documentation](
 - We do not expose the container network port `443` (https), because the instance makes use of a self-signed certificate for a hostname which is random. We won't be able to access it anyway.
 - We do not define the environment variable `FTLCONF_webserver_api_password` with a password value. This would expose it and therefore isn't recommended. We will define the password later on.
 - We do not define the environment variable `FTLCONF_dns_listeningMode=all` as the Pi-Hole instance will only interact with our host, through the internal docker network.
+- We define the environment variable `FTLCONF_dns_specialDomains_iCloudPrivateRelay=false` to allow usage of Apple Private Relay. With this setting, Pi-hole stops blocking domains used by Apple's Private Relay service (`mask.icloud.com`, `mask-h2.icloud.com`).
 
 Let's make the run script executable:
 

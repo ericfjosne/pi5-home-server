@@ -21,6 +21,13 @@ Running Home Assistant in a virtual machine provides more flexibility and is eas
 - Install [applications (add-ons)](https://www.home-assistant.io/apps). 
 - Manage updates (system & apps) directly from the Home Assistant client application.
 
+### Zigbee/Thread support (optional)
+
+If your home automation setup involves Zigbee or Thread devices, you will need a Zigbee/Thread coordinator. For this setup, it is recommended to make use of a remote unit, physically dissociated from your build, so you can position it in an optimal location to maximize antenna coverage. A remote unit will also make things easier to configure/maintain, since Home Assistant will run in a virtual machine.
+
+If you need a recommendation, I am making use of the following coordinator:
+- [SONOFF PoE Dongle Max (Zigbee/Thread)](https://sonoff.tech/en-eu/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m)
+
 ## Configuration
 
 ### Download qcow2 image

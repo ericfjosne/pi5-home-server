@@ -98,12 +98,12 @@ Apr 24 20:36:12 cortex sshd[1023005]: Server listening on :: port 22.
 First, we need to create the public and private key on the machine from which you connect to the server. This can be done using the following:
 
 ```sh
-ssh-keygen -t ed25519 -a 777
+ssh-keygen -t ed25519 -a 512
 ```
 
 Where:
 - `-t ed25519` specifies that we want to use the Ed25519 algorithm. Ed25519 is a high-performance, secure digital signature algorithm (EdDSA) based on the Twisted Edwards curve, specifically designed for speed, efficiency, and security. It offers high-level security (128 bits) with fast signing, key generation, and small 64-byte signatures, making it a modern standard for SSH, blockchains, and general cryptographic signing.
-- `-a 777` specifies the number of KDF (key derivation function, currently bcrypt_pbkdf). Higher numbers result in slower passphrase verification and increased resistance to brute-force password cracking (should the keys be stolen). The default is 16 rounds.
+- `-a 512` specifies the number of KDF (key derivation function, currently bcrypt_pbkdf). Higher numbers result in slower passphrase verification and increased resistance to brute-force password cracking (should the keys be stolen). The default is 16 rounds.
 
 The ssh key files we be created as follows:
 
